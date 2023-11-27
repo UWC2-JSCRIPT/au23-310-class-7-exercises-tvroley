@@ -51,8 +51,32 @@
           <small class="error" aria-live="polite"></small>
         </div>
 
-        <div class="form-group">
-          <label for="language">Coding language</label>
+        <div class="form-group hidden">
+          <label for="job-title">Job title</label>
+          <input
+            id="job-title"
+            class="form-control validate-input"
+            type="text"
+            name="job"
+            required
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group hidden">
+          <label for="company-website">Company website</label>
+          <input
+            id="company-website"
+            class="form-control validate-input"
+            type="url"
+            name="website"
+            required
+          />
+          <small class="error" aria-live="polite"></small>
+        </div>
+
+        <div class="form-group hidden">
+          <label for="code-language">Coding language</label>
           <select class="form-control" name="language" id="code-language">
             <option value="choose" selected="selected" disabled>
               Choose one
