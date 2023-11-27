@@ -3,6 +3,10 @@
     background-color: #ffdddd;
 }
 
+.hidden{
+    display: none;
+}
+
 input:invalid {
     border: 1px solid red;
 }
