@@ -6,8 +6,10 @@ const emailField = document.getElementById("email");
 const validLength = (input, min) => {
     if(input.value.trim().length > min) {
         input.parentElement.classList.remove("invalid");
+        return true;
     } else {
         input.parentElement.classList.add("invalid");
+        return false;
     }
 };
 
@@ -15,15 +17,15 @@ const validateEmail = (emailField) => {
     const re = /\w+@\w+\.\w+/;
     if(re.test(email.value.trim())) {
         emailField.parentElement.classList.remove("invalid");
+        return true;
     } else {
         emailField.parentElement.classList.add("invalid");
+        return false;
     }
 };
 
 form.addEventListener("submit", (e) => {
-    //default behavior not stopping without this before the validation
-    e.preventDefault();
-    if (!!(validLength(firstName, 3) + validLength(lastName, 3) + validateEmail(emailField))) {
+    if (!(validLength(firstName, 3) && validLength(lastName, 3) && validateEmail(emailField))) {
         e.preventDefault();
     }
 });
