@@ -9,6 +9,7 @@ const validLength = (input, min) => {
         return true;
     } else {
         input.parentElement.classList.add("invalid");
+        alert('name not long enough');
         return false;
     }
 };
@@ -20,6 +21,7 @@ const validateEmail = (emailField) => {
         return true;
     } else {
         emailField.parentElement.classList.add("invalid");
+        alert('invalid email format');
         return false;
     }
 };
