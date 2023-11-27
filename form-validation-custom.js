@@ -12,7 +12,7 @@ const validLength = (input, min) => {
 };
 
 form.addEventListener("submit", (e) => {
-    //e.preventDefault();
+    e.preventDefault();
     validLength(firstName, 3);
     validLength(lastName, 3);
 });
