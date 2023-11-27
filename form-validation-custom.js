@@ -10,3 +10,9 @@ const validLength = (input, min) => {
         input.parentElement.classList.add("invalid");
     }
 };
+
+form.addEventListener("submit", (e) => {
+    //e.preventDefault();
+    validLength(firstName, 3);
+    validLength(lastName, 3);
+});
