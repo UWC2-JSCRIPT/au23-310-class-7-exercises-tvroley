@@ -27,5 +27,6 @@ const validateEmail = (emailField) => {
 form.addEventListener("submit", (e) => {
     if (!(validLength(firstName, 3) && validLength(lastName, 3) && validateEmail(emailField))) {
         e.preventDefault();
+        console.log("Bad input");
     }
 });
