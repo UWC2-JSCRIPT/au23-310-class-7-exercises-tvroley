@@ -8,14 +8,12 @@ describe("Tests for the soccer game", () => {
     });
 
     describe('Tests for orderTeams function', () => {
-        it(`it should return 'Sounders: 4\nTimbers: 7\nGalaxy: 11`, () => {
-            const teams = [
-                {name: 'Sounders', results: 'wdl'},
-                {name: 'Timbers', results: 'wdlw'},
-                {name: 'Galaxy', results: 'wdlwww'}
-            ];
-            const teamsResult = orderTeams(teams);
-            const orderedTeamsTest = `Sounders: 4\nTimbers: 7\nGalaxy: 11`;
+        it(`it should return 'Sounders: 4\nTimbers: 7\nGalaxy: 10`, () => {
+            const sounders = {name: 'Sounders', results: 'wdl'};
+            const timbers = {name: 'Timbers', results: 'wdlw'};
+            const galaxy = {name: 'Galaxy', results: 'wdlww'};
+            const teamsResult = orderTeams(sounders, timbers, galaxy);
+            const orderedTeamsTest = `Sounders: 4\nTimbers: 7\nGalaxy: 10`;
 
             expect(teamsResult).toEqual(orderedTeamsTest);
         });
