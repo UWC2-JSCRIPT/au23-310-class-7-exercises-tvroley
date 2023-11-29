@@ -7,6 +7,23 @@ describe("Tests for the soccer game", () => {
         });
     });
 
+    describe('Tests for getPointsFromResult function', () => {
+        it(`it should return 0 for l`, () => {
+            const result = getPointsFromResult('l');
+            expect(result).toEqual(0);
+        });
+        
+        it(`it should return 1 for d`, () => {
+            const result = getPointsFromResult('d');
+            expect(result).toEqual(1);
+        });
+
+        it(`it should return 3 for w`, () => {
+            const result = getPointsFromResult('w');
+            expect(result).toEqual(3);
+        });
+    });
+
     describe('Tests for orderTeams function', () => {
         it(`it should return 'Sounders: 4\nTimbers: 7\nGalaxy: 10`, () => {
             const sounders = {name: 'Sounders', results: 'wdl'};
